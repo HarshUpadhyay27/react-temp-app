@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+p{
+    font-size: 2rem;
+    padding-top: 3rem;
+}
+
+.box{
+    max-width: 300px;
+    height: 350px;
+    background-color: rgb(148, 212, 212);
+    margin: 7rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: 0 .2rem 1rem gray;
+}
+
+.input-div input{
+    padding: .8rem;
+    margin-top: 7px;
+    width: 10rem;
+    border: none;
+    border-radius: 15px;
+}
+
+.input-div input:hover{
+    outline: none;
+}
+.input-div input:focus-visible{
+    outline: none;
+}
+.location{
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif
+}
+.location h2{
+    font-size: 2.5rem;
+}
+
+.location h1{
+    margin-top: 2rem;
+}
+
+.location h4{
+    margin-top: 1rem;
+}
+.wave{
+    opacity: .3;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    background-color: white;
+    width: 50rem;
+    height: 50rem;
+    margin-left: -25rem;
+    margin-top: -20rem;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+    z-index: 1;
+}
+
+.three{
+    animation: drift 5000ms infinite linear;
+    z-index: 2 !important;
+    opacity: .2;
+}
+.two{
+    animation: drift 7000ms infinite linear;
+    z-index: 3 !important;
+    opacity: .3;
+}
+.logo{
+    animation: anime 2000ms infinite ease-in-out;
+    color: white;
+}
+
+@keyframes drift{
+    from {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes anime{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .wave{
+        display: block;
+    }
+}
